@@ -1,6 +1,7 @@
 <template>
   <div>
-    <input v-on:input="onTextInput">
+    <!-- <input v-on:input="onTextInput"> -->
+    <input @input="onTextInput">
   </div>
 </template>
 
