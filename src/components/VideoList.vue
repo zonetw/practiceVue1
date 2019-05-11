@@ -1,8 +1,7 @@
 <template>
-  <div>
-    <ul>VideoList</ul>
-    {{videos.length}}
-  </div>
+  <ul>
+    <VideoListItem v-for="video in videos"></VideoListItem>
+  </ul>
 </template>
 
 <script>
@@ -16,6 +15,9 @@ export default {
   //       videos: Array
   //   },
   // 2. setup props in array
-  props: ["videos"]
+  props: ["videos"],
+  components: {
+    VideoListItem
+  }
 };
 </script>
