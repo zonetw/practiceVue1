@@ -1,6 +1,6 @@
 <template>
   <ul>
-    <VideoListItem v-for="video in videos" :videoInfo="video"></VideoListItem>
+    <VideoListItem v-for="video in videos" :videoInfo="video" :key="video.etag"></VideoListItem>
   </ul>
 </template>
 
