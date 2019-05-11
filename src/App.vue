@@ -20,6 +20,8 @@ export default {
     SearchBar,
     VideoList
   },
+  data() {
+    return { videos: [] };
   },
   methods: {
     onTermChange: function(value) {
