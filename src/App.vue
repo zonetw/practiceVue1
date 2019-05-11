@@ -1,5 +1,5 @@
 <template>
-  <SearchBar></SearchBar>
+  <SearchBar v-on:termChange="onTermChange"></SearchBar>
 </template>
 
 <script>
@@ -10,6 +10,11 @@ export default {
   // use components object to setup the all components will be used inside the template
   components: {
     SearchBar
+  },
+  methods: {
+    onTermChange: function(value) {
+      window.console.log("[App] " + value);
+    }
   }
 };
 </script>
