@@ -1,5 +1,7 @@
 <template>
-  <li>{{videoInfo.snippet.title}}</li>
+  <li class="list-group-item">
+    {{videoInfo.snippet.title}}
+  </li>
 </template>
 
 <script>
