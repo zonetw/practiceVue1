@@ -1,6 +1,7 @@
 <template>
   <div class="container">
     <SearchBar @termChange="onTermChange"></SearchBar>
+    <VideoDetail :detail="selectedVideo"></VideoDetail>
     <!-- <VideoList v-bind:videos="videos"></VideoList> -->
     <VideoList :videos="videos" @changeVideoDetail="onChangeVideoDetail"></VideoList>
   </div>
@@ -9,6 +10,8 @@
 <script>
 import SearchBar from "./components/SearchBar";
 import VideoList from "./components/VideoList";
+import VideoDetail from "./components/VideoDetail";
+
 import axios from "axios";
 
 const API_KEY = "AIzaSyBGqYeHI1j2-XRT0o5gAguVd12GVwgJPTI";
@@ -19,10 +22,14 @@ export default {
   // use components object to setup the all components will be used inside the template
   components: {
     SearchBar,
-    VideoList
+    VideoList,
+    VideoDetail
   },
   data() {
-    return { videos: [] };
+    return {
+      videos: [],
+      selectedVideo: null
+    };
   },
   methods: {
     onTermChange: function(value) {
@@ -40,7 +47,8 @@ export default {
         });
     },
     onChangeVideoDetail(videoInfo) {
-      window.console.log("[App]", videoInfo);
+      //   window.console.log("[App]", videoInfo);
+      this.selectedVideo = videoInfo;
     }
   }
 };
