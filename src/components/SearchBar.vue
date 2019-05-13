@@ -9,7 +9,7 @@
 export default {
   name: "SearchBar",
   methods: {
-    onTextInput: function(e) {
+    onTextInput(e) {
       this.$emit("termChange", e.target.value);
     }
   }
