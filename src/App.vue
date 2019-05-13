@@ -2,7 +2,7 @@
   <div class="container">
     <SearchBar @termChange="onTermChange"></SearchBar>
     <!-- <VideoList v-bind:videos="videos"></VideoList> -->
-    <VideoList :videos="videos"></VideoList>
+    <VideoList :videos="videos" @changeVideoDetail="onChangeVideoDetail"></VideoList>
   </div>
 </template>
 
@@ -38,6 +38,9 @@ export default {
         .then(response => {
           this.videos = response.data.items;
         });
+    },
+    onChangeVideoDetail(videoInfo) {
+      window.console.log("[App]", videoInfo);
     }
   }
 };
