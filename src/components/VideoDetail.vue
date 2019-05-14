@@ -1,7 +1,9 @@
 <template>
-  <div v-if="detail">
+  <div v-if="detail" class="col-md-8">
+    <div class="embed-responsive embed-responsive-16by9">
+      <iframe class="embed-responsive-item" :src="embedUrl"></iframe>
+    </div>
     <div class="detail">
-      <iframe :src="embedUrl"></iframe>
       <h4>{{detail.snippet.title}}</h4>
       <p>{{detail.snippet.description}}</p>
     </div>
