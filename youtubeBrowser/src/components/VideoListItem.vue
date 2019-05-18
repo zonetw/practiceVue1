@@ -27,6 +27,13 @@ li {
   display: flex;
   cursor: pointer;
 }
+
+/* method2 without flex */
+/* li > div {
+  display: inline-block;
+  position: absolute; but I don't know what the difference between relative & absolute
+} */
+
 li:hover {
   background-color: #eee;
 }
