@@ -5,8 +5,11 @@
 </template>
 
 <script>
+import { mapActions } from "vuex";
+
 export default {
   name: "AppHeader",
+  methods: mapActions(["login"])
 };
 </script>
 
