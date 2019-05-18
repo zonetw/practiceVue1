@@ -1,15 +1,20 @@
 import Vue from 'vue';
 import VueRouter from "vue-router";
 import App from './App';
-import AuthHandler from "./components/AuthHandler";
 import store from "./store";
+import AuthHandler from "./components/AuthHandler";
+import ImageList from "./components/ImageList";
+import Upload from "./components/Upload";
+
 
 Vue.use(VueRouter);
 
 export const router = new VueRouter({
   mode: "history", // use browser router or will use hash router
   routes: [
-    { path: "/oauth2/callback/", component: AuthHandler }
+    { path: "/oauth2/callback/", component: AuthHandler },
+    { path: "/", component: ImageList },
+    { path: "/upload", component: Upload }
   ]
 });
 
