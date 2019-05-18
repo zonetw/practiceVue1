@@ -8,10 +8,11 @@
 </template>
 
 <script>
-import { mapActions } from "vuex";
+import { mapActions, mapGetters } from "vuex";
 
 export default {
   name: "AppHeader",
+  computed: mapGetters(["isLoggedIn"]),
   methods: mapActions(["login"])
 };
 </script>
