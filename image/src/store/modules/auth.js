@@ -26,6 +26,7 @@ const actions = {
         const cbResult = qs.parse(hash.replace("#", ""));
         commit("setToken", cbResult.access_token);
         window.localStorage.setItem("imgur_token", cbResult.access_token);
+        // navigation programatically
         router.push("/");
     },
     logout({ commit }) {

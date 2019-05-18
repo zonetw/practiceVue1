@@ -3,6 +3,7 @@
     <a href="/" class="active item">Image</a>
     <div class="right menu">
       <div v-if="isLoggedIn" class="horizontal">
+        <!-- navigation by router-link -->
         <router-link to="/" class="item">Galleries</router-link>
         <router-link to="/upload" class="item">Upload</router-link>
         <a @click="logout" class="item">Logout</a>
