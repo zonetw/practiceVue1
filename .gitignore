@@ -1,2 +1,5 @@
 image/node_modules
 image/.vscode
+.idea
+imageUploader/node_modules
+imageUploader/.vscode

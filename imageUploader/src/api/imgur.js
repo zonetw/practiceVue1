@@ -22,3 +22,5 @@ export default {
         });
     }
 }
+// Client secret:
+// a6d9ab8adb360c150e937101755933b6d7ed2a2
