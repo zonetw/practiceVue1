@@ -1,6 +1,9 @@
 <template>
-    <div class="image-container">
+    <div v-if="isLoggedIn" class="image-container">
         <img v-for="(image,index) in allImages" :src="image.link" :key="index">
+    </div>
+    <div v-else>
+        <h2>Please Log in first to see the gallery!</h2>
     </div>
 </template>
 
@@ -9,7 +12,7 @@
 
     export default {
         name: "ImageList",
-        computed: mapGetters(["allImages"]),
+        computed: mapGetters(["allImages", "isLoggedIn"]),
         methods: mapActions(["fetchImages"]),
         created() {
             this.fetchImages();
